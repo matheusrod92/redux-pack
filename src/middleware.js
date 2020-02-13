@@ -34,7 +34,7 @@ function handlePromise(dispatch, getState, action) {
       [KEY.TRANSACTION]: transactionId,
     },
   });
-  handleEventHook(meta, 'onStart', payload, getState);
+  handleEventHook(meta, 'onStart', payload, dispatch, getState);
 
   const success = data => {
     dispatch({
@@ -47,8 +47,8 @@ function handlePromise(dispatch, getState, action) {
         [KEY.TRANSACTION]: transactionId,
       },
     });
-    handleEventHook(meta, 'onSuccess', data, getState);
-    handleEventHook(meta, 'onFinish', true, getState);
+    handleEventHook(meta, 'onSuccess', data, dispatch, getState);
+    handleEventHook(meta, 'onFinish', true, dispatch, getState);
     return { payload: data };
   };
 
@@ -64,8 +64,8 @@ function handlePromise(dispatch, getState, action) {
         [KEY.TRANSACTION]: transactionId,
       },
     });
-    handleEventHook(meta, 'onFailure', error, getState);
-    handleEventHook(meta, 'onFinish', false, getState);
+    handleEventHook(meta, 'onFailure', error, dispatch, getState);
+    handleEventHook(meta, 'onFinish', false, dispatch, getState);
     return { error: true, payload: error };
   };
 

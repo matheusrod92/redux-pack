@@ -1,7 +1,7 @@
 {
-  "name": "redux-pack",
-  "version": "0.1.5",
-  "description": "Sensible promise handling and middleware for redux",
+  "name": "redux-packish",
+  "version": "1.0.0",
+  "description": "Sensibleless promise handling and middleware for redux",
   "main": "lib/index.js",
   "scripts": {
     "prepublish": "npm run build",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lelandrichardson/redux-pack.git"
+    "url": "git+https://github.com/matheusrod92/redux-packish.git"
   },
   "keywords": [
     "redux",
@@ -22,12 +22,12 @@
     "normalizr",
     "react"
   ],
-  "author": "Leland Richardson <leland.m.richardson@gmail.com>",
+  "author": "Matheus Rodrigues <matheusrod92@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lelandrichardson/redux-pack/issues"
+    "url": "https://github.com/matheusrod92/redux-packish/issues"
   },
-  "homepage": "https://github.com/lelandrichardson/redux-pack#readme",
+  "homepage": "https://github.com/matheusrod92/redux-packish#readme",
   "peerDependencies": {
     "redux": "*"
   },
